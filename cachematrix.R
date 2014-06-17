@@ -6,7 +6,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     cachedMatrix <- NULL    
-    ## Set the value of matrix
+            ## Set the value of matrix
     set <- function(y) {
         message("Setting ", y)
         x <<- y
@@ -35,8 +35,10 @@ cacheSolve <- function(a, ...) {
     }
     # If not in the cache get the matrix x from makeCacheMatrix() 
     data <- a$get()    
+    
     # Inverse it
     inv <- solve(data, ...)
+    
     # Set the cache
     a$setInverse(inv)   
     inv
